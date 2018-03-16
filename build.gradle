@@ -1,12 +1,11 @@
-// Top-level build file where you can add configuration options common to all sub-projects/modules.
-
 buildscript {
-    ext.kotlin_version = '1.1.2-3'
+    ext.kotlin_version = '1.2.30'
     repositories {
         jcenter()
+        google()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:2.3.2'
+        classpath 'com.android.tools.build:gradle:3.2.0-alpha05'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
 
         // NOTE: Do not place your application dependencies here; they belong
@@ -17,7 +16,7 @@ buildscript {
 allprojects {
     repositories {
         jcenter()
-        maven { url 'https://maven.google.com' }
+        google()
     }
 }
 
@@ -26,11 +25,11 @@ task clean(type: Delete) {
 }
 
 ext {
-    buildToolsVersion = '25.0.2'
-    supportLibVersion = '25.3.1'
+    buildToolsVersion = '27.0.3'
+    supportLibVersion = '27.1.0'
     runnerVersion = '0.5'
     rulesVersion = '0.5'
     espressoVersion = '2.2.2'
-    archLifecycleVersion = '1.0.0-alpha1'
-    archRoomVersion = '1.0.0-alpha1'
+    archLifecycleVersion = '1.1.0'
+    archRoomVersion = '1.1.0-alpha3'
 }
